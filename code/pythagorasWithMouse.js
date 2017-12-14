@@ -1,4 +1,5 @@
 var canvas = document.getElementById("theCanvas");
+canvas.width *= 1.5;
 var ctx = canvas.getContext("2d");
 
 angleSpan = Math.PI * 30 / 96;
@@ -9,7 +10,7 @@ function render() {
   ctx.strokeStyle = "white";
   ctx.lineJoin = ctx.lineCap = "round";
 
-  drawTree(9, 400, 700, 0, 300);
+  drawTree(9, canvas.width / 2, 700, 0, 200);
 }
 
 canvas.onmousemove = function(e) {
